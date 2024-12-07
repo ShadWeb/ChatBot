@@ -11,7 +11,7 @@ createRoot(document.getElementById('root')).render(
     
     <BrowserRouter>
     <Routes>
-      <Route path='/' element={<PeageLogin/>}/>
+      <Route path='*' element={<PeageLogin/>}/>
       <Route path='/app' element={<App/>}/>
       <Route path='/Chatmain' element={<Chatmain/>}/>
     </Routes>
