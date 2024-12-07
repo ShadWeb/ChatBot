@@ -1,11 +1,29 @@
+import { useNavigate } from "react-router-dom"
 import iconsend from "../assets/iconsend.svg"
+import { useState } from "react";
 
 export default function InStartChat() {
+const navigate = useNavigate();
+const [invalue ,setinvalue]=useState("");
+const inputvluehandel = (e)=>{
+setinvalue(e.target.value);
+console.log(invalue);
+
+}
+
+const NewChatStartbtnsend = ()=>{
+    if(invalue.length != 0){
+        navigate("/ChatNew");
+    }
+    
+}
+
+    
   return (
     <div className="px-6 mt-9">
           <div className="flex items-center p-4 rounded-lg shadow-md">  
-                <input type="text" placeholder="Ask me anything..." className="flex-grow p-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-400" />  
-                <button className="ml-2 flex items-center justify-center  rounded-full">  
+                <input onChange={inputvluehandel} type="text" placeholder="Ask me anything..." className="flex-grow p-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-400" />  
+                <button onClick={NewChatStartbtnsend} className="ml-2 flex items-center justify-center  rounded-full">  
                 <img src={iconsend} alt="" />
                 </button>  
          </div>

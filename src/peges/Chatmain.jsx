@@ -4,7 +4,7 @@ import Sagest from "../Components/Sagest";
 
 export default function Chatmain() {
   return (
-    <div >
+    <div>
      <Hedermain/>
         <Sagest/>
      <InStartChat/>

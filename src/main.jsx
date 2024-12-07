@@ -5,6 +5,8 @@ import PeageLogin from './peges/PeageLogin.jsx'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import App from './App.jsx'
 import Chatmain from './peges/Chatmain.jsx'
+import ChatNew from './peges/ChatNew.jsx'
+import AiSetingPorofile from './peges/AiSetingPorofile.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -14,6 +16,8 @@ createRoot(document.getElementById('root')).render(
       <Route path='*' element={<PeageLogin/>}/>
       <Route path='/app' element={<App/>}/>
       <Route path='/Chatmain' element={<Chatmain/>}/>
+      <Route path='/ChatNew' element={<ChatNew/>}/>
+      <Route path='/AiSetingPorofile' element={<AiSetingPorofile/>}/>
     </Routes>
     </BrowserRouter>
   </StrictMode>,
