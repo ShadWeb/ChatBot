@@ -1,11 +1,11 @@
 import iconarr from "../assets/Iconar.svg"
 
-export default function SagestItem(props) {
+export default function SagestItem({Title  , description }) {
   return (
     <div className="border rounded-[36px] flex items-start gap-3  p-6 ">
         <div className="flex flex-col  gap-3">
-        <h2 className="font-semibold text-base">{props.Title}</h2>
-        <p className="font-normal text-sm">{props.description}</p>
+        <h2 className="font-semibold text-base">{Title}</h2>
+        <p className="font-normal text-sm">{description}</p>
         </div>
     
       <img src={iconarr} alt="" />
