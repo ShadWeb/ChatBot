@@ -13,14 +13,15 @@ console.log(invalue);
 
 const NewChatStartbtnsend = ()=>{
     if(invalue.length != 0){
-        navigate("/ChatNew");
+      const text=invalue;
+        navigate(`/ChatNew/${text}`);
     }
     
 }
 
     
   return (
-    <div className="px-6 mt-9">
+    <div className="absolute bottom-9 px-6 mt-9 w-full">
           <div className="flex items-center p-4 rounded-lg shadow-md">  
                 <input onChange={inputvluehandel} type="text" placeholder="Ask me anything..." className="flex-grow p-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-teal-400" />  
                 <button onClick={NewChatStartbtnsend} className="ml-2 flex items-center justify-center  rounded-full">  

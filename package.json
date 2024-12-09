@@ -1,7 +1,7 @@
 {
   "name": "chatbot",
   "homepage": "https://ShadWeb.github.io/ChatBot/",
-  "private": false,
+  "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {

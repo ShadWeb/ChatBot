@@ -3,6 +3,11 @@ import icoarchived from '../assets/archived.svg'
 import iconimages from '../assets/images.svg'
 import Cardhistory from './Cardhistory'
 export default function Listcategory() {
+
+
+
+
+    
   return (
     <div className='flex flex-col gap-6 px-2'>
         <div className='overflow-x-scroll flex gap-4 '>
@@ -19,7 +24,7 @@ export default function Listcategory() {
                 <span>Images</span>
             </button>
         </div>
-        <div className='flex flex-wrap  gap-4'>
+        <div className='flex flex-wrap justify-center  gap-4'>
          <Cardhistory/>
          <Cardhistory/>
          <Cardhistory/>

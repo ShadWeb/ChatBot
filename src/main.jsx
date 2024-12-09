@@ -16,8 +16,9 @@ createRoot(document.getElementById('root')).render(
       <Route path='*' element={<PeageLogin/>}/>
       <Route path='/app' element={<App/>}/>
       <Route path='/Chatmain' element={<Chatmain/>}/>
+      <Route path='/ChatNew/:text' element={<ChatNew/>}/>
       <Route path='/ChatNew' element={<ChatNew/>}/>
-      <Route path='/AiSetingPorofile' element={<AiSetingPorofile/>}/>
+      <Route path='/AiSetingPorofile/:idpage' element={<AiSetingPorofile/>}/>
     </Routes>
     </BrowserRouter>
   </StrictMode>,

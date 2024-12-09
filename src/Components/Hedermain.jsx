@@ -2,10 +2,14 @@ import { useNavigate } from 'react-router-dom'
 import iconchat from '../assets/chaticon.svg'
 import iconhamber from '../assets/Hamburger menu 3.svg'
 import iconexport from '../assets/Iconexport.svg'
-function Hedermain() {
+import { useState } from 'react'
+import ExportModal from './ExportModal'
+function Hedermain({idpage}) {
+  const [modalvisibel, setmodavisible] = useState(false);
+  const Closehandelmodal =()=> setmodavisible(false);
 const navigate = useNavigate();
 const hamberhandler =()=>{
-  navigate('/AiSetingPorofile');
+  navigate(`/AiSetingPorofile/${idpage}`);
 }
 
 
@@ -17,7 +21,11 @@ const hamberhandler =()=>{
         '>GPT 4o</span></div>
         </div>
        
-         <button><img src={iconexport} alt="" /></button>
+         <button onClick={()=>setmodavisible(true)}><img src={iconexport} alt="" /></button>
+
+      <ExportModal onClose={Closehandelmodal} visible={modalvisibel}/>
+
+
     </nav>
   )
 }

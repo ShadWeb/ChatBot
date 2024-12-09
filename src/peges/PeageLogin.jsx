@@ -21,8 +21,21 @@ function PeageLogin() {
     e.preventDefault();
     setFormErrors(validate(formVal));
     setIsSubmit(true);
+    // feapi(formVal);
   
   }
+//  const feapi=(formVal)=>{
+//   let datauser ={
+//     email:formVal.email,
+//     password:formVal.password
+//   }
+//   fetch(`https://6755d59311ce847c992b5072.mockapi.io/singup`,{
+//      method: 'POST',
+//     headers: {'content-type':'application/json'},
+//     // Send your data in the request body as JSON
+//     body: JSON.stringify(datauser)}).than((res)=> res.JSON)
+// }
+
 const validate =(values)=>{
       const errors = {};
       const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -43,6 +56,8 @@ const validate =(values)=>{
 
 useEffect(()=>{
   if (Object.keys(formErrors).length === 0 && isSubmit) {
+   
+    
    navigate('/app')
   }
 })
@@ -108,7 +123,7 @@ useEffect(()=>{
     </div>
 
 
-       <div className="flex items-center justify-center">
+       <div className="absolute bottom-6 w-full  flex items-center justify-center">
           <h2 className="font-normal text-sm text-[#616161] border-r border-[#616161] pr-4">Terms of use</h2>
           <h2 className="font-normal text-sm text-[#616161] pl-4">Privacy policy</h2>
        </div>
