@@ -47,8 +47,7 @@ const validate =(values)=>{
 useEffect(()=>{
   if (Object.keys(formErrors).length === 0 && isSubmit) {
    
-    
-   navigate('/app')
+   navigate('/home/')
   }
 })
 
@@ -113,7 +112,7 @@ useEffect(()=>{
     </div>
 
 
-       <div className="absolute bottom-6 w-full  flex items-center justify-center">
+       <div className=" mb-6 w-full  flex items-center justify-center">
           <h2 className="font-normal text-sm text-[#616161] border-r border-[#616161] pr-4">Terms of use</h2>
           <h2 className="font-normal text-sm text-[#616161] pl-4">Privacy policy</h2>
        </div>
