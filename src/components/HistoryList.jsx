@@ -24,7 +24,7 @@ function HistoryList() {
   
             {data && data.map((record)=>{
          return (
-            <Cardhistory key={record.id} Title={record.title} descripton={record.content} date={record.date} id={record.id} />
+            <Cardhistory key={record.id} Title={record.title} content={record.content} date={record.date} id={record.id} />
         );
             })}
 
