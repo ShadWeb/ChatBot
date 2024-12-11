@@ -1,7 +1,6 @@
 import iconarrleft from "../assets/Iconarleft.svg"
 import iconright from "../assets/Icon Right.svg"
 import iconavata from "../assets/Avatarsuser.svg"
-import iconaros from "../assets/iconaros.svg"
 import { useState } from "react"
 import AccountModal from "../Components/AccountModal"
 import ThemeModal from "../Components/ThemeModal"
@@ -46,7 +45,7 @@ const navigate = useNavigate();
                 <h2 className="font-medium text-lg">Email</h2>
                 <div className="flex ">
                 <span className="font-normal text-base text-[#01CD98]">r.alava@gmail.com</span> 
-                <img src={iconaros} alt="" />
+                <img src="" alt="" />
                 </div>
             </div>
             <div onClick={()=>setThemehandelmodal(true)} className="flex items-center justify-between border-b p-6">
