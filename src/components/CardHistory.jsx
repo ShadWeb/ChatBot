@@ -18,7 +18,7 @@ function Cardhistory({Title ,content,date,id}) {
   return (
    
     <div className="border border-[#EBEDEC] px-[24px] py-8 rounded-[36px] min-[370px]:max-w-[165px] min-[412px]:max-w-[190px]  flex flex-col gap-3">
-       <Link to={`/ChatNew/${id}/${false}`}>
+       <Link to={`/homechat/${id}`}>
     <h2 className="font-semibold text-base text-[#01CD98]">{Title}</h2>
     <p className="text-[#616161] font-normal text-base">{content}</p>
     <span className="text-[#616161] font-normal text-sm">{date} mins ago</span>

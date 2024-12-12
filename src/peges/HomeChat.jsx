@@ -1,23 +1,21 @@
 import Hedermain from "../Components/Hedermain";
 import SagestItem from "../components/SagestItem";
 import iconsend from "../assets/iconsend.svg"
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import MessageList from "../components/MessageList";
-
+import { useParams } from "react-router-dom";
+import data from '../data.json';
 function HomeChat() {
-  
+    let {id} =useParams()
     const [invalue ,setinvalue]=useState("");
     const [Sageshandler ,setSageshandler]=useState(true);
     const [messages, setMessages] = useState([]); 
-   
-    
+  
     const handleSendMessage = async()=>{
-        if(invalue.length != 0){
+        if(invalue.length !== 0){
         setSageshandler(false);
         const userMessage = { text: invalue, sender: 'user' };  
-      setMessages((messages) => [...messages, userMessage]);  
-
-      // Simulate an AI response  
+      setMessages((messages) => [...messages, userMessage]); 
       const aiResponse = await getAIResponse(invalue);  
       const botMessage = { text: aiResponse, sender: 'bot' };  
       setMessages((messages) => [...messages, botMessage]);  
@@ -26,18 +24,37 @@ function HomeChat() {
     }
 
     const getAIResponse = async (message) => {  
-        // Mock response for demonstration purpose  
+        
         return new Promise((resolve) => {  
-          setTimeout(() => {  
-            resolve(`You said: ${message}`);  
-          }, 1000);  
+         fetch(`https://api.dictionaryapi.dev/api/v2/entries/en_US/${message}`).then((res)=>res.json()).then((data)=>{
+          let resalt =data[0]
+            resalt.meanings.map((meaning) =>(
+            resolve(meaning.definitions[0]?.definition)
+          ) );
+         }).catch(()=>{
+          resolve('I cant help you, please enter the correct word!!')
+         }) 
         });  
       }; 
+      
+    useEffect(() => {  
+      if(id != 0 && id != undefined){
+        setSageshandler(false);
+        data.map((record)=>{
+          if(record.id == id){
+          const userMessage = { text: record.title, sender: 'user' };  
+          setMessages((messages) => [...messages, userMessage]);  
+          const botMessage = { text: record.content, sender: 'bot' };  
+          setMessages((messages) => [...messages, botMessage]);  }
+
+        })} 
+        id = ""
+    }, [id]); 
 
   return (
     <>
     <div>
-         <Hedermain idpage={'homechat'}/>
+      <Hedermain idpage={'homechat/'}/>
          {Sageshandler && (  
                 <div className="flex flex-col justify-center items-center pt-12 gap-8">  
                     <h2 className="font-semibold text-base">How can I help you, my friend? 😊️</h2>  
@@ -49,21 +66,11 @@ function HomeChat() {
                     </div>  
                 </div>  
             )} 
-            
-                <MessageList massages={messages}/>
-    
-   
+            <div className="overflow-y-auto max-h-[650px]">
+            <MessageList massages={messages}/>
+            </div>
 
-
-
-
-
-
-
-
-
-
-                <div className="absolute bottom-7 px-6 mt-9 w-full">
+                <div className="fixed bottom-4  px-6 mt-7 w-full">
                     <div className="flex items-center  p-4 rounded-lg shadow-md">  
                             <input  value={invalue}   onKeyDown={(e) => {  
                                                 if (e.key === 'Enter') {  

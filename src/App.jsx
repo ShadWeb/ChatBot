@@ -13,6 +13,7 @@ function App() {
      <Routes>
      <Route path='*' element={<PeageLogin/>}/>
      <Route path='/home/' element={<Home/>}/>
+     <Route path='/homechat/:id' element={<HomeChat/>}/>
      <Route path='/homechat/' element={<HomeChat/>}/>
      <Route path='/seting/:idpage' element={<Seting/>}/>
      </Routes>

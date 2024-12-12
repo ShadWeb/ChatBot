@@ -8,7 +8,7 @@ function HeadHome() {
 
     const navigate = useNavigate();
     const Newtopichandler=()=>{
-    navigate('/homechat/' );
+    navigate('/homechat/0' );
     }
   return (
     <header className='border-b '>
