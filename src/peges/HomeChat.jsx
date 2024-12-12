@@ -44,7 +44,7 @@ function HomeChat() {
           if(record.id == id){
           const userMessage = { text: record.title, sender: 'user' };  
           setMessages((messages) => [...messages, userMessage]);  
-          const botMessage = { text: record.content, sender: 'bot' };  
+          const  botMessage = { text: record.content, sender: 'bot' };  
           setMessages((messages) => [...messages, botMessage]);  }
 
         })} 
