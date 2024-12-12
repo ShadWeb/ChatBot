@@ -54,7 +54,7 @@ function HomeChat() {
   return (
     <>
     <div>
-      <Hedermain idpage={'homechat/'}/>
+      <Hedermain  idpage={'homechat/'}/>
          {Sageshandler && (  
                 <div className="flex flex-col justify-center items-center pt-12 gap-8">  
                     <h2 className="font-semibold text-base">How can I help you, my friend? 😊️</h2>  
@@ -66,7 +66,7 @@ function HomeChat() {
                     </div>  
                 </div>  
             )} 
-            <div className="overflow-y-auto max-h-[650px]">
+            <div className="overflow-y-auto ">
             <MessageList massages={messages}/>
             </div>
 

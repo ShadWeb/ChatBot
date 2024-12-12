@@ -15,7 +15,7 @@ const hamberhandler =()=>{
 
 
   return (
-    <nav className='flex  py-6 px-4 justify-between border-b '>
+    <nav className='flex  py-6 px-4 justify-between  sticky '>
         <div className='flex gap-3'>
         <button onClick={hamberhandler}><img src={iconhamber} alt="" /></button> 
         <div className='flex items-center gap-4'><img src={iconchat} alt="" /> <span className='font-semibold text-xl
