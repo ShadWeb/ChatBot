@@ -1,4 +1,4 @@
-import Hedermain from "../Components/Hedermain.jsx";
+import Hedermain from "../Components/Hedermain";
 import SagestItem from "../components/SagestItem";
 import iconsend from "../assets/iconsend.svg"
 import { useState,useEffect } from "react";
