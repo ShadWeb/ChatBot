@@ -1,4 +1,4 @@
-import iconaros from "./assets/iconaros.svg"
+import iconaros from "./assets/Iconaros.svg"
 import PropTypes from 'prop-types';
 
 function ThemeModal({visible,onClose }) {
