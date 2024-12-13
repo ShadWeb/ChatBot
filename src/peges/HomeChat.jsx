@@ -53,7 +53,7 @@ function HomeChat() {
 
   return (
     <>
-    <div>
+    <div className="flex flex-col gap-3">
       <div className="sticky top-0 bg-white">
       <Hedermain  idpage={'homechat/'}/>
       </div>
@@ -69,7 +69,7 @@ function HomeChat() {
                     </div>  
                 </div>  
             )} 
-            <div className="overflow-y-auto ">
+            <div className="mb-[128px] ">
             <MessageList massages={messages}/>
             </div>
 
