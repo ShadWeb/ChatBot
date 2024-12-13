@@ -69,8 +69,8 @@ function HomeChat() {
                     </div>  
                 </div>  
             )} 
-            <div className="mb-[128px] ">
-            <MessageList massages={messages}/>
+            <div  className="mb-[128px] snap-x snap-end overflow-y-auto scroll-smooth ">
+            <MessageList  massages={messages}/>
             </div>
 
                 <div className="fixed bottom-0  px-6 mt-7 w-full">

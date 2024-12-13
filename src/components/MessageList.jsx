@@ -4,7 +4,7 @@ import ChatUser from './ChatUser';
 import MassegeBot from './MassegeBot';
 function MessageList({massages}) {
   return (
-    <div>
+    <div className='snap-end'>
        {massages.length === 0 ? (  
         <p></p>  
       ) : (  
