@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import iconaros from "./assets/iconaros.svg"
+import iconaros from './assets/Iconaros.svg'
 function AccountModal({visible,onClose }) {
     if(!visible) return null;
   return (
