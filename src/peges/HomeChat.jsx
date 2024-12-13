@@ -54,7 +54,10 @@ function HomeChat() {
   return (
     <>
     <div>
+      <div className="sticky top-0 bg-white">
       <Hedermain  idpage={'homechat/'}/>
+      </div>
+   
          {Sageshandler && (  
                 <div className="flex flex-col justify-center items-center pt-12 gap-8">  
                     <h2 className="font-semibold text-base">How can I help you, my friend? 😊️</h2>  
@@ -70,8 +73,8 @@ function HomeChat() {
             <MessageList massages={messages}/>
             </div>
 
-                <div className="fixed bottom-4  px-6 mt-7 w-full">
-                    <div className="flex items-center  p-4 rounded-lg shadow-md">  
+                <div className="fixed bottom-0  px-6 mt-7 w-full">
+                    <div className="flex items-center bg-white p-4 rounded-lg shadow-md">  
                             <input  value={invalue}   onKeyDown={(e) => {  
                                                 if (e.key === 'Enter') {  
                                                     handleSendMessage();  
