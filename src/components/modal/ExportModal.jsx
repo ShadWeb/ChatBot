@@ -1,5 +1,5 @@
 import iconexport from "./assets/export.svg"
-import iconexit from "./assets/close.svg"
+import iconexit from "./assets/Close.svg"
 import PropTypes from 'prop-types';
 function ExportModal({visible,onClose }) {
   if(!visible) return null;
