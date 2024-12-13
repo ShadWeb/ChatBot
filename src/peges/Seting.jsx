@@ -1,7 +1,7 @@
 import iconarrleft from "../assets/Iconarleft.svg"
 import iconright from "../assets/Icon Right.svg"
 import iconavata from "../assets/Avatarsuser.svg"
-import iconaros from "../assets/iconaros.svg"
+import iconaros from '../assets/Iconaros.svg'
 import { useState } from "react"
 import AccountModal from "../components/modal/AccountModal"
 import ThemeModal from "../components/modal/ThemeModal"
