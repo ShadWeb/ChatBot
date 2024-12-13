@@ -2,7 +2,7 @@ import iconchat from '../assets/Vectorchat.svg';
 import icoarchived from '../assets/archived.svg';
 import iconimages from '../assets/images.svg';
 import data from '../data.json';
-import Cardhistory from './Cardhistory';
+import Cardhistory from './CardHistory.jsx';
 function HistoryList() {
   return (
     <div className='flex flex-col gap-6 px-2'>
